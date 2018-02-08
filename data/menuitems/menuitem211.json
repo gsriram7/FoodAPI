@@ -1,0 +1,9 @@
+{
+  "MenuItemId": {"S": "211"},
+  "Name": {"S": "Sizzlers"},
+  "Description": {"S": "Hot Spicy"},
+  "IsVeg": {"S": "No"},
+  "Price": {"N": "150"},
+  "MenuId": {"S": "21"},
+  "RestaurantId": {"S": "2"}
+}

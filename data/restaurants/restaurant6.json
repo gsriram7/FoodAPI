@@ -1,0 +1,10 @@
+{ 
+	"RestaurantId": {"S": "6"}, 
+	"Name": {"S": "LittleHut"},
+	"Address": {"S": "Hoover"},
+	"Cuisine": {"S": "Continental"},
+	"Rating": {"N": "3.9"},
+    "Contact": {"S": "978"},
+    "HrsOpen": {"S": "10 AM to 3 AM"},
+    "AvgCost": {"S": "$25"}
+}
