@@ -22,7 +22,7 @@ public class RestaurantResource {
 	
 	@GET
 	@Path("/{restaurantId}")
-	@Produces(MediaType.TEXT_PLAIN)
+	@Produces(MediaType.APPLICATION_JSON)
 	public Restaurant getRestaurant(@PathParam("restaurantId")String id) {
 		return restaurantService.getRestaurant(id);
 	}
@@ -30,6 +30,7 @@ public class RestaurantResource {
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<Map<String, AttributeValue>> getAllRestaurants() {
+		System.out.println(restaurantService.getAllRestaurants());
 		return restaurantService.getAllRestaurants();
 	}
 	
@@ -39,5 +40,9 @@ public class RestaurantResource {
 	public Restaurant addRestaurant(Restaurant restaurant) {
 		System.out.println("*******************"+restaurant.toString());
 		return restaurantService.addRestuarant(restaurant);
+	}
+	
+	public static void main(String[] a) {
+		System.out.println(new RestaurantService().getAllRestaurants());
 	}
 }

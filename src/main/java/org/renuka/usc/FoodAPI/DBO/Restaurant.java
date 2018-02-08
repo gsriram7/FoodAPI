@@ -13,7 +13,7 @@ public class Restaurant {
 	String cuisine;
 	Double rating;
 	String contact;
-	String hrs_open;
+	String hrsOpen;
 	String avgCost;
 	
 	/*public Restaurant() {
@@ -33,7 +33,7 @@ public class Restaurant {
 		this.avgCost = avgCost;
 	}*/
 
-	 @DynamoDBHashKey(attributeName = "RestaurantId")
+	 @DynamoDBHashKey(attributeName = "restaurantId")
 	public String getRestaurantId() {
 		return restaurantId;
 	}
@@ -42,7 +42,7 @@ public class Restaurant {
 		this.restaurantId = restaurantId;
 	}
 
-	@DynamoDBAttribute(attributeName = "Name")
+	@DynamoDBAttribute(attributeName = "name")
 	public String getName() {
 		return name;
 	}
@@ -51,7 +51,7 @@ public class Restaurant {
 		this.name = name;
 	}
 
-	@DynamoDBAttribute(attributeName = "Address")
+	@DynamoDBAttribute(attributeName = "address")
 	public String getAddress() {
 		return address;
 	}
@@ -60,7 +60,7 @@ public class Restaurant {
 		this.address = address;
 	}
 
-	@DynamoDBAttribute(attributeName = "Cuisine")
+	@DynamoDBAttribute(attributeName = "cuisine")
 	public String getCuisine() {
 		return cuisine;
 	}
@@ -69,7 +69,7 @@ public class Restaurant {
 		this.cuisine = cuisine;
 	}
 
-	@DynamoDBAttribute(attributeName = "Rating")
+	@DynamoDBAttribute(attributeName = "rating")
 	public Double getRating() {
 		return rating;
 	}
@@ -78,7 +78,7 @@ public class Restaurant {
 		this.rating = rating;
 	}
 
-	@DynamoDBAttribute(attributeName = "Contact")
+	@DynamoDBAttribute(attributeName = "contact")
 	public String getContact() {
 		return contact;
 	}
@@ -87,13 +87,13 @@ public class Restaurant {
 		this.contact = contact;
 	}
 
-	@DynamoDBAttribute(attributeName = "Hrs_open")
-	public String getHrs_open() {
-		return hrs_open;
+	@DynamoDBAttribute(attributeName = "hrsOpen")
+	public String getHrsOpen() {
+		return hrsOpen;
 	}
 
-	public void setHrs_open(String hrs_open) {
-		this.hrs_open = hrs_open;
+	public void setHrsOpen(String hrsOpen) {
+		this.hrsOpen = hrsOpen;
 	}
 
 	@DynamoDBAttribute(attributeName = "AvgCost")
