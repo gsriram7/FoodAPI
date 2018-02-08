@@ -1,0 +1,98 @@
+/* Inserting objects for Table Restaurant through DynamoDB Javascript shell*/
+
+var params = {
+  Item: { 
+  "RestaurantId": {"S": "1"},
+  "Name": {"S": "Happy Days"},
+  "Address": {"S": "Los Angeles"},
+  "Cuisine": {"S": "Italian"},
+  "Rating": {"N": "4.5"}, 
+    "Contact": {"S": "123"},
+    "HrsOpen": {"S": "9 AM to 9 PM"}, 
+    "AvgCost": {"S": "$25"}
+}, 
+  ReturnConsumedCapacity: "TOTAL", 
+  TableName: "Restaurant"
+ };
+ dynamodb.putItem(params, function(err, data) {
+   if (err) console.log(err, err.stack); // an error occurred
+   else     console.log(data);           // successful response
+ });
+
+
+var params = {
+  Item: { 
+  "RestaurantId": {"S": "2"},
+  "Name": {"S": "Manas"},
+  "Address": {"S": "San Jose"},
+  "Cuisine": {"S": "Indian"},
+  "Rating": {"N": "4.5"}, 
+    "Contact": {"S": "234"},
+    "HrsOpen": {"S": "11 AM to 10 PM"},
+    "AvgCost": {"S": "$30"}
+}, 
+  ReturnConsumedCapacity: "TOTAL", 
+  TableName: "Restaurant"
+ };
+ dynamodb.putItem(params, function(err, data) {
+   if (err) console.log(err, err.stack); // an error occurred
+   else     console.log(data);           // successful response
+ });
+
+
+var params = {
+  Item: { 
+  "RestaurantId": {"S": "3"},
+  "Name": {"S": "Dominos"},
+  "Address": {"S": "Vermont"},
+  "Cuisine": {"S": "Italian"},
+  "Rating": {"N": "4"},
+    "Contact": {"S": "345"},
+    "HrsOpen": {"S": "6 AM to 12 AM"},
+    "AvgCost": {"S": "$15"}
+}, 
+  ReturnConsumedCapacity: "TOTAL", 
+  TableName: "Restaurant"
+ };
+ dynamodb.putItem(params, function(err, data) {
+   if (err) console.log(err, err.stack); // an error occurred
+   else     console.log(data);           // successful response
+ });
+
+var params = {
+  Item: { 
+  "RestaurantId": {"S": "4"},
+  "Name": {"S": "Taco Bell"},
+  "Address": {"S": "NYC"},
+  "Cuisine": {"S": "Mexican"},
+  "Rating": {"N": "4.5"},
+    "Contact": {"S": "456"},
+    "HrsOpen": {"S": "6 AM to 12 AM"},
+    "AvgCost": {"S": "$45"}
+}, 
+  ReturnConsumedCapacity: "TOTAL", 
+  TableName: "Restaurant"
+ };
+ dynamodb.putItem(params, function(err, data) {
+   if (err) console.log(err, err.stack); // an error occurred
+   else     console.log(data);           // successful response
+ });
+
+var params = {
+  Item: { 
+	"RestaurantId": {"S": "5"}, 
+	"Name": {"S": "Subway"},
+	"Address": {"S": "Las Vegas"},
+	"Cuisine": {"S": "Continental"},
+	"Rating": {"N": "3.5"},
+    "Contact": {"S": "678"},
+    "HrsOpen": {"S": "6 AM to 3 AM"},
+    "AvgCost": {"S": "$15"}
+}, 
+  ReturnConsumedCapacity: "TOTAL", 
+  TableName: "Restaurant"
+ };
+ dynamodb.putItem(params, function(err, data) {
+   if (err) console.log(err, err.stack); // an error occurred
+   else     console.log(data);           // successful response
+ });

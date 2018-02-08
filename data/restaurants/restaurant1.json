@@ -1,0 +1,10 @@
+{ 
+	"RestaurantId": {"S": "1"},
+	"Name": {"S": "Happy Days"},
+	"Address": {"S": "Los Angeles"},
+	"Cuisine": {"S": "Italian"},
+	"Rating": {"N": "4.5"}, 
+    "Contact": {"S": "123"},
+    "HrsOpen": {"S": "9 AM to 9 PM"}, 
+    "AvgCost": {"S": "$25"}
+}

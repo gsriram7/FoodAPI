@@ -1,0 +1,76 @@
+/* Inserting objects for Table MenuItem through DynamoDB Javascript shell*/
+
+var params = {
+  Item: {
+  "MenuItemId": {"S": "111"},
+  "Name": {"S": "Pizza"},
+  "Description": {"S": "Large"},
+  "IsVeg": {"S": "No"},
+  "Price": {"N": "20"},
+  "MenuId": {"S": "11"},
+  "RestaurantId": {"S": "1"}
+}, 
+  ReturnConsumedCapacity: "TOTAL", 
+  TableName: "MenuItem"
+ };
+ dynamodb.putItem(params, function(err, data) {
+   if (err) console.log(err, err.stack); // an error occurred
+   else     console.log(data);           // successful response
+ });
+
+
+ var params = {
+  Item: {
+  "MenuItemId": {"S": "112"},
+  "Name": {"S": "Roti"},
+  "Description": {"S": "Medium"},
+  "IsVeg": {"S": "No"},
+  "Price": {"N": "15"},
+  "MenuId": {"S": "11"},
+  "RestaurantId": {"S": "1"}
+}, 
+  ReturnConsumedCapacity: "TOTAL", 
+  TableName: "MenuItem"
+ };
+ dynamodb.putItem(params, function(err, data) {
+   if (err) console.log(err, err.stack); // an error occurred
+   else     console.log(data);           // successful response
+ });
+
+
+ var params = {
+  Item: {
+  "MenuItemId": {"S": "121"},
+  "Name": {"S": "Sandwich"},
+  "Description": {"S": "Large"},
+  "IsVeg": {"S": "No"},
+  "Price": {"N": "20"},
+  "MenuId": {"S": "12"},
+  "RestaurantId": {"S": "1"}
+}, 
+  ReturnConsumedCapacity: "TOTAL", 
+  TableName: "MenuItem"
+ };
+ dynamodb.putItem(params, function(err, data) {
+   if (err) console.log(err, err.stack); // an error occurred
+   else     console.log(data);           // successful response
+ });
+
+
+ var params = {
+  Item: {
+  "MenuItemId": {"S": "122"},
+  "Name": {"S": "Pasta"},
+  "Description": {"S": "Medium"},
+  "IsVeg": {"S": "No"},
+  "Price": {"N": "15"},
+  "MenuId": {"S": "12"},
+  "RestaurantId": {"S": "1"}
+}, 
+  ReturnConsumedCapacity: "TOTAL", 
+  TableName: "MenuItem"
+ };
+ dynamodb.putItem(params, function(err, data) {
+   if (err) console.log(err, err.stack); // an error occurred
+   else     console.log(data);           // successful response
+ });

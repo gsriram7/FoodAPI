@@ -1,4 +1,4 @@
-package org.renuka.usc.FoodAPI.DBO;
+package org.renuka.usc.FoodAPI.model;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
@@ -15,25 +15,19 @@ public class Restaurant {
 	String contact;
 	String hrsOpen;
 	String avgCost;
-	
-	/*public Restaurant() {
-		// TODO Auto-generated constructor stub
-	}
-	
-	public Restaurant(String restaurantId, String name, String address, String cuisine, Double rating, String contact,
-			String hrs_open, String avgCost) {
-		super();
+
+	public Restaurant(String restaurantId, String name, String address, String cuisine, Double rating, String contact, String hrsOpen, String avgCost) {
 		this.restaurantId = restaurantId;
 		this.name = name;
 		this.address = address;
 		this.cuisine = cuisine;
 		this.rating = rating;
 		this.contact = contact;
-		this.hrs_open = hrs_open;
+		this.hrsOpen = hrsOpen;
 		this.avgCost = avgCost;
-	}*/
+	}
 
-	 @DynamoDBHashKey(attributeName = "restaurantId")
+	@DynamoDBHashKey(attributeName = "RestaurantId")
 	public String getRestaurantId() {
 		return restaurantId;
 	}
@@ -42,7 +36,7 @@ public class Restaurant {
 		this.restaurantId = restaurantId;
 	}
 
-	@DynamoDBAttribute(attributeName = "name")
+	@DynamoDBAttribute(attributeName = "Name")
 	public String getName() {
 		return name;
 	}
@@ -51,7 +45,7 @@ public class Restaurant {
 		this.name = name;
 	}
 
-	@DynamoDBAttribute(attributeName = "address")
+	@DynamoDBAttribute(attributeName = "Address")
 	public String getAddress() {
 		return address;
 	}
@@ -60,7 +54,7 @@ public class Restaurant {
 		this.address = address;
 	}
 
-	@DynamoDBAttribute(attributeName = "cuisine")
+	@DynamoDBAttribute(attributeName = "Cuisine")
 	public String getCuisine() {
 		return cuisine;
 	}
@@ -69,7 +63,7 @@ public class Restaurant {
 		this.cuisine = cuisine;
 	}
 
-	@DynamoDBAttribute(attributeName = "rating")
+	@DynamoDBAttribute(attributeName = "Rating")
 	public Double getRating() {
 		return rating;
 	}
@@ -78,7 +72,7 @@ public class Restaurant {
 		this.rating = rating;
 	}
 
-	@DynamoDBAttribute(attributeName = "contact")
+	@DynamoDBAttribute(attributeName = "Contact")
 	public String getContact() {
 		return contact;
 	}
@@ -87,7 +81,7 @@ public class Restaurant {
 		this.contact = contact;
 	}
 
-	@DynamoDBAttribute(attributeName = "hrsOpen")
+	@DynamoDBAttribute(attributeName = "HrsOpen")
 	public String getHrsOpen() {
 		return hrsOpen;
 	}

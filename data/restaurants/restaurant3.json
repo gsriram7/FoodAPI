@@ -1,0 +1,10 @@
+{ 
+	"RestaurantId": {"S": "3"},
+	"Name": {"S": "Dominos"},
+	"Address": {"S": "Vermont"},
+	"Cuisine": {"S": "Italian"},
+	"Rating": {"N": "4"},
+    "Contact": {"S": "345"},
+    "HrsOpen": {"S": "6 AM to 12 AM"},
+    "AvgCost": {"S": "$15"}
+}

@@ -1,0 +1,10 @@
+{ 
+	"RestaurantId": {"S": "2"},
+	"Name": {"S": "Manas"},
+	"Address": {"S": "San Jose"},
+	"Cuisine": {"S": "Indian"},
+	"Rating": {"N": "4.5"}, 
+    "Contact": {"S": "234"},
+    "HrsOpen": {"S": "11 AM to 10 PM"},
+    "AvgCost": {"S": "$30"}
+}

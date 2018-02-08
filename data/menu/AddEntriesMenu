@@ -1,0 +1,79 @@
+/* Inserting objects for Table Menu through DynamoDB Javascript shell*/
+
+var params = {
+  Item: {
+  "MenuId": {"S": "11"},
+  "Category": {"S": "Breakfast"},
+  "NoOfItems": {"S": "5"},
+  "RestaurantId": {"S": "1"}
+}, 
+  ReturnConsumedCapacity: "TOTAL", 
+  TableName: "Menu"
+ };
+ dynamodb.putItem(params, function(err, data) {
+   if (err) console.log(err, err.stack); // an error occurred
+   else     console.log(data);           // successful response
+ });
+
+ var params = {
+  Item: {
+  "MenuId": {"S": "12"},
+  "Category": {"S": "Lunch"},
+  "NoOfItems": {"S": "5"},
+  "RestaurantId": {"S": "1"}
+}, 
+  ReturnConsumedCapacity: "TOTAL", 
+  TableName: "Menu"
+ };
+ dynamodb.putItem(params, function(err, data) {
+   if (err) console.log(err, err.stack); // an error occurred
+   else     console.log(data);           // successful response
+ });
+
+
+ var params = {
+  Item: {
+  "MenuId": {"S": "13"},
+  "Category": {"S": "Dinner"},
+  "NoOfItems": {"S": "10"},
+  "RestaurantId": {"S": "1"}
+}, 
+  ReturnConsumedCapacity: "TOTAL", 
+  TableName: "Menu"
+ };
+ dynamodb.putItem(params, function(err, data) {
+   if (err) console.log(err, err.stack); // an error occurred
+   else     console.log(data);           // successful response
+ });
+
+
+ var params = {
+  Item: {
+  "MenuId": {"S": "21"},
+  "Category": {"S": "Breakfast"},
+  "NoOfItems": {"S": "5"},
+  "RestaurantId": {"S": "2"}
+}, 
+  ReturnConsumedCapacity: "TOTAL", 
+  TableName: "Menu"
+ };
+ dynamodb.putItem(params, function(err, data) {
+   if (err) console.log(err, err.stack); // an error occurred
+   else     console.log(data);           // successful response
+ });
+
+
+ var params = {
+  Item: {
+  "MenuId": {"S": "22"},
+  "Category": {"S": "Dinner"},
+  "NoOfItems": {"S": "5"},
+  "RestaurantId": {"S": "2"}
+}, 
+  ReturnConsumedCapacity: "TOTAL", 
+  TableName: "Menu"
+ };
+ dynamodb.putItem(params, function(err, data) {
+   if (err) console.log(err, err.stack); // an error occurred
+   else     console.log(data);           // successful response
+ });

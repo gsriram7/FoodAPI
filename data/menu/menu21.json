@@ -1,0 +1,6 @@
+{
+  "MenuId": {"S": "21"},
+  "Category": {"S": "Breakfast"},
+  "NoOfItems": {"S": "5"},
+  "RestaurantId": {"S": "2"}
+}

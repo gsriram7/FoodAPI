@@ -1,0 +1,10 @@
+{ 
+	"RestaurantId": {"S": "5"}, 
+	"Name": {"S": "Subway"},
+	"Address": {"S": "Las Vegas"},
+	"Cuisine": {"S": "Continental"},
+	"Rating": {"N": "3.5"},
+    "Contact": {"S": "678"},
+    "HrsOpen": {"S": "6 AM to 3 AM"},
+    "AvgCost": {"S": "$15"}
+}

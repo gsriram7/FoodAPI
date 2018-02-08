@@ -1,0 +1,10 @@
+{ 
+	"RestaurantId": {"S": "4"},
+	"Name": {"S": "Taco Bell"},
+	"Address": {"S": "NYC"},
+	"Cuisine": {"S": "Mexican"},
+	"Rating": {"N": "4.5"},
+    "Contact": {"S": "456"},
+    "HrsOpen": {"S": "6 AM to 12 AM"},
+    "AvgCost": {"S": "$45"}
+}

@@ -1,0 +1,9 @@
+{
+  "MenuItemId": {"S": "121"},
+  "Name": {"S": "Sandwich"},
+  "Description": {"S": "Large"},
+  "IsVeg": {"S": "No"},
+  "Price": {"N": "20"},
+  "MenuId": {"S": "12"},
+  "RestaurantId": {"S": "1"}
+}
