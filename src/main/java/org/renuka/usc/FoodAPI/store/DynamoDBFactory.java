@@ -1,6 +1,6 @@
 package org.renuka.usc.FoodAPI.store;
 
-import com.amazonaws.regions.Regions;
+import com.amazonaws.client.builder.AwsClientBuilder;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
@@ -21,7 +21,9 @@ public class DynamoDBFactory {
 	    }
 	    public static AmazonDynamoDB getDBInstance(){
 	        if(client == null){
-	        	client = AmazonDynamoDBClientBuilder.standard().withRegion(Regions.US_WEST_2).build();
+	        	client = AmazonDynamoDBClientBuilder.standard().withEndpointConfiguration(
+	                    new AwsClientBuilder.EndpointConfiguration("http://localhost:8001", "us-west-2"))
+	                    .build();
 	        }
 	        return client;
 	    }

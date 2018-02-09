@@ -27,30 +27,6 @@
    else     console.log(data);           // successful response
  });
 
-/* Table MenuItem*/
- var params = {
-  AttributeDefinitions: [
-     {
-    AttributeName: "MenuItemId", 
-    AttributeType: "S"
-   }
-  ], 
-  KeySchema: [
-     {
-    AttributeName: "MenuItemId", 
-    KeyType: "HASH"
-   }
-  ], 
-  ProvisionedThroughput: {
-   ReadCapacityUnits: 5, 
-   WriteCapacityUnits: 5
-  }, 
-  TableName: "MenuItem "
- };
- dynamodb.createTable(params, function(err, data) {
-   if (err) console.log(err, err.stack); // an error occurred
-   else     console.log(data);           // successful response
- });
 
 /* Table Menu*/
  var params = {
@@ -71,6 +47,32 @@
    WriteCapacityUnits: 5
   }, 
   TableName: "Menu"
+ };
+ dynamodb.createTable(params, function(err, data) {
+   if (err) console.log(err, err.stack); // an error occurred
+   else     console.log(data);           // successful response
+ });
+ 
+ 
+ /* Table MenuItem*/
+ var params = {
+  AttributeDefinitions: [
+     {
+    AttributeName: "MenuItemId", 
+    AttributeType: "S"
+   }
+  ], 
+  KeySchema: [
+     {
+    AttributeName: "MenuItemId", 
+    KeyType: "HASH"
+   }
+  ], 
+  ProvisionedThroughput: {
+   ReadCapacityUnits: 5, 
+   WriteCapacityUnits: 5
+  }, 
+  TableName: "MenuItem"
  };
  dynamodb.createTable(params, function(err, data) {
    if (err) console.log(err, err.stack); // an error occurred
