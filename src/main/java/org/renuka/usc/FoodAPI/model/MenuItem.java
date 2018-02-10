@@ -31,7 +31,7 @@ public class MenuItem {
 		this.restaurantId = restaurantId;
 	}*/
 
-    @DynamoDBHashKey(attributeName = "ItemId")
+    @DynamoDBHashKey(attributeName = "MenuItemId")
     public String getMenuItemId() {
         return menuItemId;
     }
@@ -93,4 +93,12 @@ public class MenuItem {
     public void setRestaurantId(String restaurantId) {
         this.restaurantId = restaurantId;
     }
+
+	@Override
+	public String toString() {
+		return "MenuItem [menuItemId=" + menuItemId + ", name=" + name + ", description=" + description + ", isVeg="
+				+ isVeg + ", price=" + price + ", menuId=" + menuId + ", restaurantId=" + restaurantId + "]";
+	}
+    
+    
 }

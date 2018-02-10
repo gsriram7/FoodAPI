@@ -20,6 +20,7 @@ public class RestaurantServiceImpl implements RestaurantService {
     final Table table = DynamoDBFactory.getDynamoInstance().getTable(tableName);
 
     public boolean addRestaurant(Restaurant restaurant) {
+    	System.out.println("DB start OK restaurant");
         boolean status = true;
         try {
             System.out.println("Saving restaurant to DB" + restaurant.toString());
@@ -36,6 +37,10 @@ public class RestaurantServiceImpl implements RestaurantService {
         Map<String, Object> result = new HashMap<>();
         try {
             Item item = table.getItem(primaryKey, restaurantId);
+            if(item==null) {
+            	System.out.println("The restaurant "+restaurantId+" doesn't exist");
+            	return result;
+            }
             result = item.asMap();
         } catch (Exception e) {
             System.out.println("Exception while retrieving Restaurant ID " + restaurantId);
@@ -53,6 +58,11 @@ public class RestaurantServiceImpl implements RestaurantService {
     public boolean deleteRestaurant(String id) {
         boolean status = true;
         try {
+        	Item item = table.getItem(primaryKey, id);
+            if(item==null) {
+            	System.out.println("The restaurant "+id+" doesn't exist");
+            	return status;
+            }
         	deleteMenuOfRestaurant(id);
             table.deleteItem(primaryKey, id);
             System.out.println("Following restaurant is deleted... ID:" + id);

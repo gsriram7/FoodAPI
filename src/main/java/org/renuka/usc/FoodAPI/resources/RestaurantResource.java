@@ -35,6 +35,7 @@ public class RestaurantResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.TEXT_PLAIN)
     public String addRestaurant(Restaurant restaurant) {
+    	System.out.println(restaurant.toString());
         return Boolean.toString(restaurantService.addRestaurant(restaurant));
     }
 

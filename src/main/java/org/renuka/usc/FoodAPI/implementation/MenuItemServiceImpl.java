@@ -23,7 +23,7 @@ import java.util.Map;
 public class MenuItemServiceImpl implements MenuItemService {
 
     final private String tableName = "MenuItem";
-    final private String primaryKey = "ItemId";
+    final private String primaryKey = "MenuItemId";
     final Table table = DynamoDBFactory.getDynamoInstance().getTable(tableName);
 
     @Override
@@ -34,7 +34,7 @@ public class MenuItemServiceImpl implements MenuItemService {
             table.putItem(getItem(menuItem));
         } catch (Exception e) {
             status = false;
-            System.out.println("Error occurred while saving menu item ID: " + menuItem.getMenuId());
+            System.out.println("Error occurred while saving menu item ID: " + menuItem.getMenuItemId());
             System.out.println(e.getMessage());
         }
         return status;
@@ -42,9 +42,14 @@ public class MenuItemServiceImpl implements MenuItemService {
 
     @Override
     public Map<String, Object> getMenuItemById(String menuItemId) {
+    	System.out.println("DB call OK");
         Map<String, Object> result = new HashMap<>();
         try {
             Item item = table.getItem(primaryKey, menuItemId);
+            if(item==null) {
+            	System.out.println("The menuitem "+menuItemId+" doesn't exist");
+            	return result;
+            }
             result = item.asMap();
         } catch (Exception e) {
             System.out.println("Exception while retrieving Menu Item ID " + menuItemId);
@@ -76,7 +81,7 @@ public class MenuItemServiceImpl implements MenuItemService {
         boolean status = true;
         try {
             table.deleteItem(primaryKey, menuItemId);
-            System.out.println("Following menu is deleted... ID: " + menuItemId);
+            System.out.println("Following menu item is deleted... ID: " + menuItemId);
         } catch (Exception e) {
             status = false;
             System.out.println("Exception occurred while deleting item from Table " + tableName + " ID: " + menuItemId);
@@ -144,7 +149,7 @@ public class MenuItemServiceImpl implements MenuItemService {
 
     private Item getItem(MenuItem menu) {
         Item item = new Item()
-                .withPrimaryKey("ItemId", menu.getMenuItemId())
+                .withPrimaryKey("MenuItemId", menu.getMenuItemId())
                 .withString("Name", menu.getName())
                 .withString("Description", menu.getDescription())
                 .withString("IsVeg", menu.getIsVeg())

@@ -62,5 +62,10 @@ public class Menu {
         this.restaurantId = restaurantId;
     }
 
+	@Override
+	public String toString() {
+		return "Menu [menuId=" + menuId + ", category=" + category + ", noOfItems=" + noOfItems + ", restaurantId="
+				+ restaurantId + "]";
+	}
 
 }

@@ -42,6 +42,10 @@ public class MenuServiceImpl implements MenuService {
         Map<String, Object> result = new HashMap<>();
         try {
             Item item = table.getItem(primaryKey, menuId);
+            if(item==null) {
+            	System.out.println("The menu "+menuId+" doesn't exist");
+            	return result;
+            }
             result = item.asMap();
         } catch (Exception e) {
             System.out.println("Exception while retrieving Menu ID " + menuId);
@@ -72,6 +76,11 @@ public class MenuServiceImpl implements MenuService {
     public boolean deleteMenu(String menuId) {
         boolean status = true;
         try {
+        	Item item = table.getItem(primaryKey, menuId);
+            if(item==null) {
+            	System.out.println("The menu "+menuId+" doesn't exist");
+            	return status;
+            }
         	MenuItemServiceImpl menuItemService = new MenuItemServiceImpl();
             menuItemService.deleteMenuItemsOfMenu(menuId);
             table.deleteItem(primaryKey, menuId);

@@ -16,7 +16,7 @@ public class Restaurant {
 	String hrsOpen;
 	String avgCost;
 
-	public Restaurant(String restaurantId, String name, String address, String cuisine, Double rating, String contact, String hrsOpen, String avgCost) {
+	/*public Restaurant(String restaurantId, String name, String address, String cuisine, Double rating, String contact, String hrsOpen, String avgCost) {
 		this.restaurantId = restaurantId;
 		this.name = name;
 		this.address = address;
@@ -25,7 +25,7 @@ public class Restaurant {
 		this.contact = contact;
 		this.hrsOpen = hrsOpen;
 		this.avgCost = avgCost;
-	}
+	}*/
 
 	@DynamoDBHashKey(attributeName = "RestaurantId")
 	public String getRestaurantId() {
@@ -99,4 +99,13 @@ public class Restaurant {
 		this.avgCost = avgCost;
 	}
 
+	@Override
+	public String toString() {
+		return "Restaurant [restaurantId=" + restaurantId + ", name=" + name + ", address=" + address + ", cuisine="
+				+ cuisine + ", rating=" + rating + ", contact=" + contact + ", hrsOpen=" + hrsOpen + ", avgCost="
+				+ avgCost + "]";
+	}
+
+	
+	
 }

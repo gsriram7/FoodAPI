@@ -1,9 +1,9 @@
 {
-  "MenuItemId": {"S": "112"},
-  "Name": {"S": "Roti"},
-  "Description": {"S": "Medium"},
-  "IsVeg": {"S": "No"},
-  "Price": {"N": "15"},
-  "MenuId": {"S": "11"},
-  "RestaurantId": {"S": "1"}
+  "menuItemId": "112",
+  "name": "Roti",
+  "description": "Medium",
+  "isVeg": "No",
+  "price": "15",
+  "menuId": "11",
+  "restaurantId": "1"
 }

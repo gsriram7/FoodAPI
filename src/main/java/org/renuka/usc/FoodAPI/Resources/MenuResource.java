@@ -32,6 +32,7 @@ public class MenuResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.TEXT_PLAIN)
     public String addMenu(Menu menu) {
+    	System.out.println(menu.toString());
         return Boolean.toString(menuService.addNewMenu(menu));
     }
 
@@ -49,11 +50,11 @@ public class MenuResource {
         return Boolean.toString(menuService.deleteMenuItemsOfTheMenu(id));
     }
     
-    @DELETE
-    @Path("/delete/menuitems/{restaurantId}")
+   /* @DELETE
+    @Path("/delete/restaurant/{restaurantId}")
     @Produces(MediaType.TEXT_PLAIN)
-    public String deleteItemsOfRestaurant(@PathParam("restaurantId") String id) {
+    public String deleteMenusOfRestaurant(@PathParam("restaurantId") String id) {
         return Boolean.toString(menuService.deleteMenuOfRestaurant(id));
-    }
+    }*/
 
 }

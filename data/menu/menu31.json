@@ -1,6 +1,7 @@
 {
-  "MenuId": {"S": "31"},
-  "Category": {"S": "Brunch"},
-  "NoOfItems": {"S": "15"},
-  "RestaurantId": {"S": "3"}
+  "menuId": "31",
+  "category": "Lunch",
+  "noOfItems": "10",
+  "restaurantId": "3"
 }
+

@@ -14,9 +14,10 @@ public class MenuItemResource {
     MenuItemServiceImpl menuItemService = new MenuItemServiceImpl();
 
     @GET
-    @Path("/{itemId}")
+    @Path("/{menuitemId}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Map<String, Object> getMenuItem(@PathParam("itemId") String id) {
+    public Map<String, Object> getMenuItem(@PathParam("menuitemId") String id) {
+    	System.out.println("Service call OK"+id);
         return menuItemService.getMenuItemById(id);
     }
 
@@ -32,13 +33,15 @@ public class MenuItemResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.TEXT_PLAIN)
     public String addMenuItem(MenuItem item) {
+    	System.out.println(item.toString());
         return Boolean.toString(menuItemService.addMenuItem(item));
     }
 
     @DELETE
-    @Path("/delete/{itemId}")
+    @Path("/delete/{menuitemId}")
     @Produces(MediaType.TEXT_PLAIN)
-    public String deleteMenuItem(@PathParam("itemId") String id) {
+    public String deleteMenuItem(@PathParam("menuitemId") String id) {
+    	System.out.println("Service Request OK"+id);
         return Boolean.toString(menuItemService.deleteMenuItem(id));
     }
 

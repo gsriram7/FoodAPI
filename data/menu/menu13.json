@@ -1,6 +1,6 @@
 {
-  "MenuId": {"S": "13"},
-  "Category": {"S": "Dinner"},
-  "NoOfItems": {"S": "10"},
-  "RestaurantId": {"S": "1"}
+  "menuId": "13",
+  "category": "Dinner",
+  "noOfItems": "10",
+  "restaurantId": "1"
 }

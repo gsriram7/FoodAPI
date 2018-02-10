@@ -1,9 +1,9 @@
 {
-  "MenuItemId": {"S": "111"},
-  "Name": {"S": "Pizza"},
-  "Description": {"S": "Large"},
-  "IsVeg": {"S": "No"},
-  "Price": {"N": "20"},
-  "MenuId": {"S": "11"},
-  "RestaurantId": {"S": "1"}
+  "menuItemId": "111",
+  "name": "Pizza",
+  "description": "Large",
+  "isVeg": "No",
+  "price": "20",
+  "menuId": "11",
+  "restaurantId": "1"
 }

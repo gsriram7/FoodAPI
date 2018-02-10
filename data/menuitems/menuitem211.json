@@ -1,9 +1,9 @@
 {
-  "MenuItemId": {"S": "211"},
-  "Name": {"S": "Sizzlers"},
-  "Description": {"S": "Hot Spicy"},
-  "IsVeg": {"S": "No"},
-  "Price": {"N": "150"},
-  "MenuId": {"S": "21"},
-  "RestaurantId": {"S": "2"}
+  "menuItemId": "211",
+  "name": "Sizzlers",
+  "description": "Hot Spicy",
+  "isVeg": "No",
+  "price": "150",
+  "menuId": "21",
+  "restaurantId": "2"
 }
